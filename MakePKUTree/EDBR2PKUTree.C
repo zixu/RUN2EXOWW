@@ -30,18 +30,15 @@ void EDBR2PKUTree::Loop(TString channel, Double_t XS, Double_t totaleventnumber)
 		Long64_t ientry = LoadTree(jentry);
 		if (ientry < 0) break;
 		nb = fChain->GetEntry(jentry);   nbytes += nb;
-		// if (Cut(ientry) < 0) continue;
-		pfMET = Float_t(met);
-		pfMETPhi = Float_t(metPhi);
-		//pfMET = Float_t(MET_et);
-		//pfMETPhi = Float_t(MET_phi);
+		pfMET = Float_t(MET_et);
+		pfMETPhi = Float_t(MET_phi);
 		l_pt = Float_t(ptlep1);
 		l_eta = Float_t(etalep1);
 		l_phi = Float_t(philep1);
 		jet_pt = Float_t(ptVhad);
 		jet_eta = Float_t(yVhad);
 		jet_phi = Float_t(phiVhad);
-		jet_mass_pruned = Float_t(massVhad);
+		jet_mass_pruned = Float_t(jetAK8_mass);
 		jet_mass_softdrop = Float_t(sdrop);
 		jet_tau2tau1 = Float_t(tau21);
 		W_pt = Float_t(ptVlep);
@@ -55,12 +52,9 @@ void EDBR2PKUTree::Loop(TString channel, Double_t XS, Double_t totaleventnumber)
 
 		lumiWeight=Identical_lumiWeight;
 		weight=lumiWeight*triggerWeight*pileupWeight;
-		//`Double_t Mpoint=0.814; 
-		// number_qq = number_qq+1;
 		Int_t num_bJet=0.;
 		for(Int_t i=0; i<6; i++)  {
-			if( TMath::Abs(ak4jet_eta[i])>3.14)continue;
-			if(ak4jet_pt[i]>30 && ak4jet_icsv[i]>0.814) {num_bJet=num_bJet+1;}
+			if(ak4jet_pt[i]>30 && ak4jet_icsv[i]>0.814 && fabs(ak4jet_eta[i])<2.4 && deltaRAK4AK8[i]>=0.8 ) {num_bJet=num_bJet+1;}
 		}
 		nbtag=num_bJet;
 
