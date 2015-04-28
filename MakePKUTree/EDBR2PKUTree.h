@@ -409,6 +409,7 @@ void EDBR2PKUTree::Init(TTree *tree)
    file_cutflow =new ofstream(m_dataset+"_eventnum.txt");
 
    ExTree->Branch("CategoryID", &CategoryID, "CategoryID/I");
+   ExTree->Branch("vTagID", &vTagID, "vTagID/I");
    ExTree->Branch("massVhad", &massVhad, "massVhad/D");
    //ExTree->Branch("candMass", &candMass, "candMass/D");
    ExTree->Branch("tau21", &tau21, "tau21/D");
