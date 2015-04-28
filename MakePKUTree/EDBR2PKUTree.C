@@ -139,6 +139,12 @@ void EDBR2PKUTree::Loop(TString channel, Double_t XS, Double_t totaleventnumber)
 
 		CategoryID=tmp_categoryID_channel* tmp_categoryID_eventselection;
 
+		if(tau21<=0){vTagID=2;}
+		else if(tau21>0 && tau21<=0.5){vTagID=1;}
+		else if(tau21>0.5 && tau21<=0.75){vTagID=0;}
+		else if(tau21>0.75 && tau21<=1){vTagID=-1;}
+		else {vTagID=-2;}
+
 		if(TMath::Abs(CategoryID)<10) ExTree->Fill();
 	}
 
