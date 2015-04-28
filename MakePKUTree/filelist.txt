@@ -1,0 +1,19 @@
+# root file_name                                               ; Theory_XS fb;  Event_Number
+treeEDBR_RSGravitonToWW_1000_bb.root                           ;  2370.     ;    29205
+#treeEDBR_RSGravitonToWW_1500_bb.root                           ;  235.      ;    26500
+treeEDBR_RSGravitonToWW_2000_bb.root                           ;  47.97     ;    29854
+#treeEDBR_RSGravitonToWW_2500_bb.root                           ;  9.4       ;    25000
+treeEDBR_RSGravitonToWW_3000_bb.root                           ;  2.92      ;    28983
+treeEDBR_RSGravitonToWW_4000_bb.root                           ;  0.2739    ;    28687
+#TTJets_MSDecaysCKM_central_Tune4C_13TeV-madgraph-tauola.root   ;  831760.   ;    25347056
+#TBarToLeptons_s-channel-CSA14_Tune4C_13TeV-aMCatNLO-tauola.root;  4160.     ;    250000
+#TBarToLeptons_t-channel_Tune4C_CSA14_13TeV-aMCatNLO-tauola.root;  80970.    ;    1999800
+#Tbar_tW-channel-DR_Tune4C_13TeV-CSA14-powheg-tauola.root       ;  35600.    ;    971800
+#TToLeptons_s-channel-CSA14_Tune4C_13TeV-aMCatNLO-tauola.root   ;  7200.     ;    500000
+#TToLeptons_t-channel-CSA14_Tune4C_13TeV-aMCatNLO-tauola.root   ;  136050.   ;    3991000
+#T_tW-channel-DR_Tune4C_13TeV-CSA14-powheg-tauola.root          ;  35600.    ;    986100
+#LOWW-lvjj-PT180.root                                           ;  290.      ;    19800
+#WJetsToLNu_HT-100to200_Tune4C_13TeV-madgraph-tauola.root       ;  1817000.  ;    5262265
+#WJetsToLNu_HT-200to400_Tune4C_13TeV-madgraph-tauola.root       ;  471600.   ;    4936077
+#WJetsToLNu_HT-400to600_Tune4C_13TeV-madgraph-tauola.root       ;  55610.    ;    4640594
+#WJetsToLNu_HT-600toInf_Tune4C_13TeV-madgraph-tauola.root       ;  18810.    ;    4581841
