@@ -81,6 +81,7 @@ public :
    Double_t MET_corrPx;
    Double_t MET_corrPy;
    Int_t CategoryID;
+   Int_t vTagID;//1: tau21<0.5; 0: tau21>0.5 <0.75; -1: tau21 >0.75
 
    Double_t        weight;
 
@@ -133,6 +134,7 @@ public :
    Double_t        ak4jet_dr[6];
    Double_t        ak4jet_csv[6];
    Double_t        ak4jet_icsv[6];
+   Double_t        deltaRAK4AK8[6];
    Double_t        eeDeltaR;
    Double_t        ptel1;
    Double_t        ptel2;
@@ -184,9 +186,9 @@ public :
    Double_t        deltaRlepjet;
    Double_t        delPhijetmet;
    Double_t        delPhijetlep;
-   bool IDLoose;
-   bool isHighPt;
-   bool isHEEP;
+   Bool_t IDLoose;
+   Bool_t isHighPt;
+   Bool_t isHEEP;
    Double_t ptmu1,etamu1;
    Double_t trackIso;
    // List of branches
@@ -252,6 +254,7 @@ public :
    TBranch        *b_ak4jet_dr;   //!
    TBranch        *b_ak4jet_csv;   //!
    TBranch        *b_ak4jet_icsv;   //!
+   TBranch        *b_deltaRAK4AK8;   //!
    TBranch        *b_eeDeltaR;   //!
    TBranch        *b_ptel1;   //!
    TBranch        *b_ptel2;   //!
@@ -529,6 +532,7 @@ void EDBR2PKUTree::Init(TTree *tree)
    fChain->SetBranchAddress("ak4jet_dr", ak4jet_dr, &b_ak4jet_dr);
    fChain->SetBranchAddress("ak4jet_csv", ak4jet_csv, &b_ak4jet_csv);
    fChain->SetBranchAddress("ak4jet_icsv", ak4jet_icsv, &b_ak4jet_icsv);
+   fChain->SetBranchAddress("deltaRAK4AK8", deltaRAK4AK8, &b_deltaRAK4AK8);
    fChain->SetBranchAddress("eeDeltaR", &eeDeltaR, &b_eeDeltaR);
    fChain->SetBranchAddress("ptel1", &ptel1, &b_ptel1);
    fChain->SetBranchAddress("ptel2", &ptel2, &b_ptel2);
